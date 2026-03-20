@@ -1,0 +1,79 @@
+import Link from "next/link";
+import { Facebook, Instagram, MessageCircle, Phone } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="mt-16 border-t border-red-100 bg-gradient-to-br from-white via-white to-red-50/60 text-gray-600 dark:border-gray-800 dark:from-gray-950 dark:via-gray-950 dark:to-gray-900">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-6xl py-12">
+        <div className="grid gap-10 text-sm md:grid-cols-[1.2fr,1fr,1fr]">
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              MiraiBits
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Building software, hardware, and cloud solutions for Sri Lanka&apos;s
+              next big ideas.
+            </p>
+            <p className="text-gray-500 dark:text-gray-400">Colombo, Sri Lanka</p>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-500">
+              Reach Us
+            </h4>
+            <p className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
+              <Phone className="h-4 w-4 text-gray-900 dark:text-gray-100" aria-hidden="true" />
+              <a className="hover:underline" href="tel:+94726604751">
+                0726604751
+              </a>
+            </p>
+            <p className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
+              <MessageCircle
+                className="h-4 w-4 text-gray-900 dark:text-gray-100"
+                aria-hidden="true"
+              />
+              <a
+                className="hover:underline"
+                href="https://wa.me/94726604751"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-500">
+              Follow
+            </h4>
+            <div className="flex gap-3">
+              <Link
+                href="https://www.instagram.com/miraielectronics/"
+                aria-label="MiraiBits on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/10 text-red-600 transition hover:bg-red-500/20 dark:bg-red-500/20 dark:text-red-300 dark:hover:bg-red-500/30"
+              >
+                <Instagram className="h-4 w-4" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/people/Mirailk/61583875169776/"
+                aria-label="MiraiBits on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/10 text-red-600 transition hover:bg-red-500/20 dark:bg-red-500/20 dark:text-red-300 dark:hover:bg-red-500/30"
+              >
+                <Facebook className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-red-100 pt-6 text-xs text-gray-500 dark:border-gray-800 dark:text-gray-400">
+          © {new Date().getFullYear()} MiraiBits. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}
