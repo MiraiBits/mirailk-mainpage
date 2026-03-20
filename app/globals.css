@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-sakura-50: #fff3f2;
+  --color-sakura-100: #ffe4e1;
+  --color-sakura-200: #ffc4bf;
+  --color-sakura-300: #ff9f97;
+  --color-sakura-400: #f6715f;
+  --color-sakura-500: #e6443b;
+  --color-sakura-600: #c73a34;
+  --color-sakura-700: #a4302c;
+  --color-sakura-800: #842723;
+  --color-sakura-900: #6b1f1d;
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease both;
+}
